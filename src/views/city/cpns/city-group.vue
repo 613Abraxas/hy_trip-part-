@@ -3,7 +3,7 @@
     <van-index-bar :sticky="false" :index-list="indexList">
       <van-index-anchor index="热门" />
       <div class="list">
-        <template v-for="(city, index) in groupData.hotCities">
+        <template v-for="(city, index) in groupData.hotCities" :key="index">
           <div class="city" @click="cityClick(city)">{{ city.cityName }}</div>
         </template>
       </div>

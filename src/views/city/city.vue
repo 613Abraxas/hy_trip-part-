@@ -21,7 +21,7 @@
     <div class="content">
       <!-- <city-group :group-data="currentGroup" />
       <city-group :group-data="currentGroup" /> -->
-      <template v-for="(value, key, index) in allCities">
+      <template v-for="(value, key, index) in allCities" :key="key">
         <!-- <h2 v-show="tabActive === key">{{ value.title }}</h2> -->
         <city-group v-show="tabActive === key" :group-data="value" />
       </template>
